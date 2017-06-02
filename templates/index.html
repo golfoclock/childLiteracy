@@ -1,2 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Literacy Report</title>
+    <link rel="stylesheet" href="{{ url_for ('static',filename='lib/css/introjs.css')}}">
+   <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/bootstrap.min.css')}}">
+   <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/keen-dashboards.css')}}">
+   <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/dc.css')}}">
+   <link rel="stylesheet" href="{{ url_for ('static', filename='css/custom.css')}}">
 
+ </head>
+<body class="application">
+
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+   <div class="container-fluid">
+       <div class="navbar-header">
+           <a class="navbar-brand" href="./">Report on Child Literacy</a>
+            <div input type="button" class="btn btn-primary btn-md" id="RST2">
+           <a href="javascript:dc.filterAll(); dc.renderAll();">Reset</a>
+       </div>
+
+       </div>
+   </div>
+</div>
+
+
+<div  id="outer" class="container-fluid">
+
+       <!-- Poverty -->
+       <div class="col-xs-8">
+           <div class="chart-wrapper">
+               <div class="chart-title">
+                   Origin Country Chart
+               </div>
+               <div class="chart-stage">
+                   <div id="origin-chart"></div>
+               </div>
+           </div>
+       </div>
+       <!-- Poverty -->
+
+          <div class="col-xs-4">
+                   <div class="chart-wrapper">
+                       <div class="chart-title">
+                           Received Refugees by Country
+                       </div>
+                       <div class="chart-stage">
+                           <div id="country-chart"></div>
+                       </div>
+                   </div>
+               </div>
+       <!-- menu select -->
+       <div class="col-xs-8">
+           <div class="chart-wrapper">
+               <div class="chart-title">
+                   Syrian Refugees by Year
+               </div>
+               <div class="chart-stage">
+                   <div id="syria-chart"></div>
+               </div>
+           </div>
+       </div>
+
+        </div>
+
+         <div class="col-xs-4">
+           <div class="chart-wrapper">
+               <div class="chart-title">
+                   Number Display
+               </div>
+               <div class="chart-stage">
+                   <div id="number-box"></div>
+               </div>
+           </div>
+       </div>
+</div>
+
+<hr>
+<p class="small text-muted"> Data from United Nations. Dashboard by Colleen McAuley </p>
+<script src="{{ url_for ('static', filename='lib/js/graph.js')}}"></script>
+<script src="{{ url_for ('static', filename='lib/js/jquery.min.js')}}"></script>
+<script src="{{ url_for ('static', filename='lib/js/bootstrap.min.js')}}"></script>
+<script src="{{ url_for ('static', filename='lib/js/crossfilter.js')}}"></script>
 <script src="{{ url_for ('static', filename='lib/js/d3.js')}}"></script>
+<script src="{{ url_for ('static', filename='lib/js/dc.js')}}"></script>
+<script src="{{ url_for ('static', filename='lib/js/queue.js')}}"></script>
+<script src="{{ url_for ('static', filename='lib/js/keen.min.js')}}"></script>
+<script src="{{ url_for ('static', filename='lib/js/intro.js')}}"></script>
+</div>
+</body>
+</html>

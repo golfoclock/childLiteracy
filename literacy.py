@@ -14,7 +14,8 @@ MONGOD_HOST = 'localhost'
 MONGOD_PORT = 27017
 DBS_NAME = os.getenv('MONGO_DB_NAME', 'literacyUNICEF')
 COLLECTION_NAME = os.getenv('MONGO_COLLECTION_NAME', 'youth')
-FIELDS = {'Country': True, 'Year': True}
+FIELDS = {'Country': True, '_id': False, 'Year': True,
+          'Total': True, 'Male': True, 'Female': True}
 
 @app.route("/")
 def index():

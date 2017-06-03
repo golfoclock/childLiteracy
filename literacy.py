@@ -12,8 +12,8 @@ app = Flask(__name__)
 
 MONGOD_HOST = 'localhost'
 MONGOD_PORT = 27017
-DBS_NAME = os.getenv('MONGO_DB_NAME', 'literacyUNICEF')
-COLLECTION_NAME = os.getenv('MONGO_COLLECTION_NAME', 'youth')
+DBS_NAME = os.getenv('MONGO_DB_NAME', 'literacyD')
+COLLECTION_NAME = os.getenv('MONGO_COLLECTION_NAME', 'youthC')
 FIELDS = {'Country': True, '_id': False, 'Year': True,
           'Total': True, 'Male': True, 'Female': True}
 
@@ -22,7 +22,7 @@ def index():
     return render_template("index.html")
 
 
-@app.route("/literacyUNICEF/youth")
+@app.route("/literacyD/youthC")
 def unicefProject():
     connection = MongoClient(MONGOD_HOST, MONGOD_PORT)
     # connection = MongoClient(MONGO_URI)

@@ -1,8 +1,8 @@
 /**
  * Created by CMMC on 5/16/17.
  */
-queue()
-    .defer(d3.json, "/literacyUNICEF/youth")
+d3.queue()
+    .defer(d3.json, "/literacy_Unicef/youth_C")
     .await(makeGraphs);
 
 function makeGraphs(error, projectsJson) {
